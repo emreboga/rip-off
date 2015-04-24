@@ -1,2 +1,3 @@
-# rip-off
-Airline ticket price collector
+# Rip-off
+
+coming soon...

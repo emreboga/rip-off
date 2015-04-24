@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         browserify: {
             dist: {
                 files: {
-                    'build/scripts/app.js': [
+                    'build/scripts/sudoku.js': [
                         'src/templates/compiled/*.js',
                         'src/scripts/*.js'
                     ]
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         concat: {
             css: {
                 src: 'src/styles/**/*.css',
-                dest: 'build/styles/app.css'
+                dest: 'build/styles/sudoku.css'
             }
         },
 
@@ -29,7 +29,8 @@ module.exports = function(grunt) {
         copy: {
             main: {
                 files: [
-                    { src: ['**/*.html'], dest: 'build/', expand: true, cwd: 'src/html'}
+                    { src: ['**/*.html'], dest: 'build/', expand: true, cwd: 'src/html'},
+                    { src: ['jade-runtime.js'], dest: 'build/scripts', expand: true, cwd: 'src/scripts'}
                 ]
             }
         },
